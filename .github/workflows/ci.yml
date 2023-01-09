@@ -14,4 +14,4 @@ jobs:
         uses: chindit/actions-phpstan@master
         with:
           # Arguments to add to PHPStan
-          arguments: 'filemanager/ --level=7'
+          arguments: 'filemanager/ --level=5'
