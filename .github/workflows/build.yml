@@ -9,15 +9,15 @@
         - name: Checkout
           uses: actions/checkout@v3
 
-        - name: Set Node.js 16.x
+        - name: Set Node.js 12.x
           uses: actions/setup-node@v3
           with:
-            node-version: 16.x  
+            node-version: 12.x  
 
         - name: Python 2
           uses: actions/setup-python@v4
           with:
-            python-version: '2.7.17' 
+            python-version: '2.7.18' 
             
         - name: Run install
           uses: borales/actions-yarn@v4
