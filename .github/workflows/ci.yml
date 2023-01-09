@@ -1,15 +1,17 @@
 name: CI
-
-on: [push]
-
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 jobs:
-  phpstan:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: php-actions/composer@v6
+      - uses: actions/checkout@v2
 
-      - name: PHPStan Static Analysis
-        uses: php-actions/phpstan@v3
+      - name: PHPStan
+        uses: chindit/actions-phpstan@master
         with:
-          path: filemanager
+          # Arguments to add to PHPStan
+          arguments: 'filemanager/ --level=7'
